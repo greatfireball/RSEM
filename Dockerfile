@@ -1,5 +1,10 @@
-FROM ubuntu:16.10
-MAINTAINER Nuno Agostinho <nunodanielagostinho@gmail.com>
+FROM ubuntu:18.04
+LABEL maintainer="frank.foerster@ime.fraunhofer.de" \
+      description="Dockerfile providing the RSEM pipeline" \
+      version=${VERSION} \
+      org.label-schema.vcs-ref=${VCS_REF} \
+      org.label-schema.build-date=${BUILD_DATE} \
+      org.label-schema.vcs-url="https://github.com/greatfireball/RSEM.git"
 
 RUN apt-get update
 
